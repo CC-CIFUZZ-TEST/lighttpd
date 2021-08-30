@@ -46,6 +46,7 @@ Protocols
 Advanced Features
 `````````````````
 
+
 - load-balanced FastCGI
   (one webserver distributes requests to multiple PHP-servers via FastCGI)
 - custom error pages (for Response-Code 400-599)
