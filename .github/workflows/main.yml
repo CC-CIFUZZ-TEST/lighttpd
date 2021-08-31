@@ -51,7 +51,7 @@ jobs:
           dashboard_address: ${{ env.WEB_APP_ADDRESS }}
       - id: list-findings
         name: List Findings
-        uses: CodeIntelligenceTesting/github-actions/list_findings@feat_CIFUZZ-528_action_checkApi        
+        uses: CodeIntelligenceTesting/github-actions@feat_CIFUZZ-528_action_checkApi/list_findings        
         if: ${{ github.event_name == 'pull_request' && (success() || failure()) }}
         with:
           name: 'CI Fuzz Findings'
