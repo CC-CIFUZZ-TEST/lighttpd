@@ -56,9 +56,9 @@ jobs:
         with:
           name: 'CI Fuzz Findings'
           test_collection_run: ${{ steps.start-fuzzing.outputs.test_collection_run }}
-          ci-fuzz-api-token: ${{ secrets.CI_FUZZ_API_TOKEN }}
-          serverUrl: ${{env.WEB_APP_ADDRESS}}
-          projectId: ${{env.PROJECT_ID}}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          ci_fuzz_api_token: ${{ secrets.CI_FUZZ_API_TOKEN }}
+          dashboard_address: ${{env.WEB_APP_ADDRESS}}
+          project: ${{env.PROJECT_ID}}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           owner: ${{ github.event.repository.owner.login }}
           repository: ${{ github.event.repository.name }}
