@@ -601,16 +601,7 @@ static size_t http_request_parse_reqline(server *srv, connection *con, buffer *h
 			{
 				char *nuri = NULL;
 				size_t j, jlen;
-
-				/* \r\n -> \0\0 */
-			      #ifdef __COVERITY__
-				if (0 == i) return 400;
-			      #endif
-				if (ptr[i-1] == '\r') {
-					ptr[i-1] = '\0';
-				} else if (http_header_strict) { /* '\n' */
-					return http_request_header_line_invalid(srv, 400, "missing CR before LF in header -> 400");
-				}
+		
 
 				if (NULL == proto) {
 					return http_request_header_line_invalid(srv, 400, "incomplete request line -> 400");
