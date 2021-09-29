@@ -9,6 +9,7 @@
  * -3: padding
  */
 
+
 /* BASE64_STANDARD: "A-Z a-z 0-9 + /" maps to 0-63, pad with "=" */
 static const char base64_standard_table[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 static const signed char base64_standard_reverse_table[] = {
